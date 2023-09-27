@@ -37,3 +37,4 @@ For a DevOps approach it's recommendable to use vim as text editor. It's the pre
 
     Use `chemod 7 01_hello_bash.sh` (4 + 2 + 1) for give all permissions to a file. Also, our example runs using `chemod +x 01_hello_bash.sh`.
     To dive deeper on it, check [this resource](https://www.redhat.com/sysadmin/linux-file-permissions-explained).
+  - Use `bash 01_hello_bash.sh` to execute the file. Or only navigate to the `.sh` and the file will be execute when you push enter.
