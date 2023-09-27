@@ -24,10 +24,16 @@ For a DevOps approach it's recommendable to use vim as text editor. It's the pre
     ``` bash
       -rw-r--r-- 1 endyb endyb 31 Sep 27 13:46 01_hello_bash.sh
     ```
-    Indicates that you only have read permission.
+    Which indicates that neither user (rw-), group (r--) nor other (r--) have execution permission.
   - Enable execute permission for the script (This step is necessary everytime after creating a `.sh` file.
     Let's understand a little about permission notation:
-    r -> read permission
-    w -> write permission
-    x -> execute permission
-    Use `chemod x` ...
+
+    r (read permission) -> 4
+
+    w (write permission) -> 2
+
+    x (execute permission) -> 1
+
+
+    Use `chemod 7 01_hello_bash.sh` (4 + 2 + 1) for give all permissions to a file. Also, our example runs using `chemod +x 01_hello_bash.sh`.
+    To dive deeper on it, check [this resource](https://www.redhat.com/sysadmin/linux-file-permissions-explained).
