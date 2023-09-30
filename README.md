@@ -14,4 +14,31 @@ For a DevOps approach it's recommendable to use vim as text editor. It's the pre
   ```
 
   ## 2. Knowing the basics
-  
+  - To create a project folder, then navigate into and type `vim 01_hello_bash.sh` notice the extension `.sh`.
+  - Insert this code
+    ``` bash
+      #!/bin/bash
+      echo "Hello World"
+    ```
+  - type `ls -l` and you'll see an output similar to this:
+    ``` bash
+      -rw-r--r-- 1 endyb endyb 31 Sep 27 13:46 01_hello_bash.sh
+    ```
+    Which indicates that neither user (rw-), group (r--) nor other (r--) have execution permission.
+  - Enable execute permission for the script (This step is necessary everytime after creating a `.sh` file.
+    Let's understand a little about permission notation:
+
+    r (read permission) -> 4
+
+    w (write permission) -> 2
+
+    x (execute permission) -> 1
+
+
+    Use `chemod 7 01_hello_bash.sh` (4 + 2 + 1) for give all permissions to a file. Also, our example runs using `chemod +x 01_hello_bash.sh`.
+    To dive deeper on it, check [this resource](https://www.redhat.com/sysadmin/linux-file-permissions-explained).
+  - Use `bash 01_hello_bash.sh` to execute the file. Or only navigate to the `.sh` and the file will be execute when you push enter.
+
+## 3. Variables and its scope
+  - Environment Variable (S.O level)
+  - User Variables (File level)
