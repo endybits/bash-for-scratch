@@ -11,10 +11,10 @@
    $1... S9 --> N args
    ${10}... --> When N args is greater than 9 use brackets'
  
-
+arg1=$1
 echo "Total arguments: $#"
 echo "Script name: $0"
-echo "1st arg: $1"
+echo "1st arg: $arg1"
 echo "2nd arg: $2"
 echo "3rd arg: $3"
 echo "10th arg: ${10}"
