@@ -7,12 +7,15 @@
 
 # Arguments
 : 'Sintax:
-   $0       --> Script name
-   $1... S9 --> N args
-   ${10}... --> When N args is greater than 9 use brackets'
+    $#       --> Count the total args
+    $* / $@  --> Get all args
+    $0       --> Script name
+    $1... S9 --> N args
+    ${10}... --> When N args is greater than 9 use brackets'
  
 arg1=$1
 echo "Total arguments: $#"
+echo "All arguments: $@"
 echo "Script name: $0"
 echo "1st arg: $arg1"
 echo "2nd arg: $2"
