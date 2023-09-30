@@ -7,11 +7,10 @@
 
 # Getting user inputs
 
-echo "ShBot./> Hello I'm shellBot. Could you tell me your name? "
-read 
-name=$REPLY
+echo "ShBot./> Hello I'm shellBot." 
+echo "Could you tell me your name? "
+read name
 echo "ShBot. /> Hi $name! 💣💥💫 Welcome to our amazing service!"
-echo -e "How can I hep you?\n$name />_ "
-read prompt
+read -p "How can I hep you, $name? " prompt
 echo "ShBot. /> Uploading answer for you query: \"$prompt\""
 
