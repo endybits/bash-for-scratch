@@ -6,7 +6,7 @@
     }'
 
 # Arguments
-:' Sintax:
+: 'Sintax:
    $0       --> Script name
    $1... S9 --> N args
    ${10}... --> When N args is greater than 9 use brackets'
